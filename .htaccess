@@ -1,0 +1,7 @@
+# Use PHP5.4 as default
+# Changed PHP handler from application/x-httpd-php54 to application/x-httpd-phpbeta on Wed Jan 13 14:11:04 MST 2016.
+AddHandler application/x-httpd-phpbeta .php
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
